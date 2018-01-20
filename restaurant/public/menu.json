@@ -1,0 +1,22 @@
+{
+    "menu": {
+        "starters": [{
+            "itemname": "Cheeseburger",
+            "price": "5"
+        }, {
+            "itemname": "Nigiri Plater",
+            "price": "18"
+        }],
+        "lunch": [{
+            "itemname": "Toni's Marinated Olives",
+            "price": "14"
+        }, {
+            "itemname": "outh Beverly Brownie",
+            "price": "28"
+        }],
+        "dinner": [{
+            "itemname": "Ding's Crispy Chicken Sandwich",
+            "price": "8"
+        }]
+    }
+}
