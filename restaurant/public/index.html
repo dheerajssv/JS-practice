@@ -4,6 +4,9 @@
 <head>
     <title>Restaurant name</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
     <script>
         function makeAjaxCall(url, callbackfunc) {
             var xhttp = new XMLHttpRequest();
@@ -40,10 +43,23 @@
         }
 
         function displayLocationsContent(data) {
-            document.getElementById("main").innerHTML = data;
+            var jsonObj=JSON.parse(data);
+            var htmlContent="<b>Address</b><br>";
+            //console.log(jsonObj.locations.address.length);
+            parsing(jsonObj.locations.address);
+            function parsing(category) {
+                for (var i in category) {
+                    htmlContent += category[i].line1 + "<br>" + category[i].line2 + "<br>";
+                }
+            }
+            document.getElementById("main").innerHTML = htmlContent;
         }
 
         function displayContactUsContent(data) {
+            document.getElementById("main").innerHTML = data;
+        }
+
+        function displaySignUpContent(data) {
             document.getElementById("main").innerHTML = data;
         }
     </script>
@@ -63,10 +79,13 @@
                     <a href="#" onclick="makeAjaxCall('menu', displayMenuContent);">MENU</a>
                 </li>
                 <li>
-                    <a href="#" onclick="makeAjaxCall('locations.html', displayLocationsContent);">LOCATIONS</a>
+                    <a href="#" onclick="makeAjaxCall('locations.json', displayLocationsContent);">LOCATIONS</a>
                 </li>
                 <li>
                     <a href="#" onclick="makeAjaxCall('contactus.html', displayContactUsContent);">CONTACT US</a>
+                </li>
+                <li>
+                    <a href="#" onclick="makeAjaxCall('signup.html', displaySignUpContent);">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -74,9 +93,11 @@
     <div id="main">
 
     </div>
-    <div id="footer">
+    <div class="clear"></div>
+    <footer id="footer">
         <p>Copyright</p>
-    </div>
+    </footer>
+    
 
 
 </body>

@@ -11,13 +11,13 @@ function drawOneProduct(ele, index) {
     image.setAttribute("height", "200");
     y.appendChild(image);
 
-    console.log(obj.available_colors.length);
+    //console.log(obj.available_colors.length);
     if (obj.available_colors.length > 1) {
         var k = document.createElement("div");
         k.setAttribute("class", "gal");
         for (var i = 0; i < obj.available_colors.length; i++) {
             var images = document.createElement("img");
-            console.log(obj.available_colors[i].image_url);
+            //console.log(obj.available_colors[i].image_url);
             images.setAttribute("src", obj.available_colors[i].image_url);
             images.setAttribute("width", "300");
             images.setAttribute("height", "200");

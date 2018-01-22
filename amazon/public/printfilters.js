@@ -121,7 +121,8 @@ function mycloosure() {
 
 var printfilters = mycloosure();
 
-printfilters();
+//printfilters();
+var newProductData = jsonproductdata;
 
 function loadfilters() {
     printfilters.necks();
@@ -130,7 +131,9 @@ function loadfilters() {
     printfilters.sizes();
     printfilters.fits();
     printfilters.colors();
+    newProductData.forEach(drawOneProduct);
 }
+
 /*
 function loadfilters() {
     printnecktypes();
@@ -262,47 +265,45 @@ function print(availabletypes, divid) {
 // }
 
 
-    
-    function getCheckedBoxes() {
-        var checkboxes = document.getElementsByClassName("filters");
-        var checkboxesChecked = [];
-        console.log(checkboxes);
-        for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].checked) {
-                checkboxesChecked.push(checkboxes[i].id);
-            }
-        }
-        console.log(checkboxesChecked);
-        return checkboxesChecked.length > 0 ? checkboxesChecked : null;
-    }
 
-    function filterfunc() {
-        var checkedboxestofilter = getCheckedBoxes();
-        var list = [];
-        document.getElementById("displayfilteredby").innerHTML = "Filtered by " + checkedboxestofilter;
-        for (i = 0; i < checkedboxestofilter.length; i++) {
-            var productList =
-                newProductData.filter(
-                    function (obj) {
-                        if (!obj) return false;
-                        var p = [];
-                        var s = [];
-                        for (var j = 0; j < obj.available_colors.length; j++) {
-                            s = s.concat(obj.available_colors[j].colors);
-                            console.log(s);
-                        }
-                        p = p.concat(obj.size, obj.fit, obj.Neck_type, obj.Sleeve_type, s, obj.shirt_type);
-                        console.log(p);
-                        return p.includes(checkedboxestofilter[i]);
+function getCheckedBoxes() {
+    var checkboxes = document.getElementsByClassName("filters");
+    var checkboxesChecked = [];
+    console.log(checkboxes);
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            checkboxesChecked.push(checkboxes[i].id);
+        }
+    }
+    console.log(checkboxesChecked);
+    return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+}
+
+function filterfunc() {
+    var checkedboxestofilter = getCheckedBoxes();
+    var list = [];
+    document.getElementById("displayfilteredby").innerHTML = "Filtered by " + checkedboxestofilter;
+    for (i = 0; i < checkedboxestofilter.length; i++) {
+        var productList =
+            newProductData.filter(
+                function (obj) {
+                    if (!obj) return false;
+                    var p = [];
+                    var s = [];
+                    for (var j = 0; j < obj.available_colors.length; j++) {
+                        s = s.concat(obj.available_colors[j].colors);
+                        console.log(s);
                     }
-                );
-            list = list.concat(productList);
-        }
-        //console.log(list);
-        list = [...new Set(list)];
-        console.log(list);
-        document.getElementById("listbody").innerHTML = "";
-        list.forEach(drawOneProduct);
+                    p = p.concat(obj.size, obj.fit, obj.Neck_type, obj.Sleeve_type, s, obj.shirt_type);
+                    console.log(p);
+                    return p.includes(checkedboxestofilter[i]);
+                }
+            );
+        list = list.concat(productList);
     }
-
-
+    //console.log(list);
+    list = [...new Set(list)];
+    console.log(list);
+    document.getElementById("listbody").innerHTML = "";
+    list.forEach(drawOneProduct);
+}

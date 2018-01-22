@@ -1,0 +1,13 @@
+{
+    "locations": {
+        "address": [{
+                "line1": "502 N 18th Ave,",
+                "line2": "Durant, Oklahama, 74701"
+            },
+            {
+                "line1": "5 Spruce Park Rd,",
+                "line2": "Plainfield, NewHampshire, 03781"
+            }
+        ]
+    }
+}

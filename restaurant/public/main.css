@@ -29,30 +29,29 @@ img{
     float: left;
     margin: 10px;
 }
-/* #logo {
-    display: inline-block;
-    width: 20%;
-    margin: 0 auto;
-    height: 10px;
-}
-
-#nav {
-    display: inline-block;
-    width: 50%;
-    margin: 0 auto;
-    height: 100px;
-} */
 
 #main {
     clear: both;
+    margin: 5px;
+    border: 10px;
+    padding: 10px;
 }
 
-#footer {
-    position: fixed;
+#form{
+    margin-bottom: 50px;
+}
+
+#footer {    
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: black;
     color: white;
     text-align: center;
+    height: 50px;
+    position: fixed;
+}
+
+.clear {
+    clear: both;
 }

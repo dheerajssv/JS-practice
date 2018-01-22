@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-<script src="jsondata.js"></script>
-<script src="layout.js"></script>
-<script src="printfilters.js"></script>
-<!-- <script>
+
+<head>
+    <script src="jsondata.js"></script>
+    <script src="layout.js"></script>
+    <script src="printfilters.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- <script>
     function image(img,obj) {
         var src = img.src;
         var id=img.class;
@@ -12,64 +15,34 @@
 
     }
 </script> -->
+    <script>
+        function makeAjaxCall(url, callbackfunc) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    callbackfunc(xhttp.responseText);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
 
-<link rel="stylesheet" type="text/css" href="main.css">
-
-<head>
-
+        function displayHomeContent(data) {
+            document.getElementById("main").innerHTML = data;
+            loadfilters();
+        }
+    </script>
 </head>
 
-<body onload="loadfilters()">
+<body onload="makeAjaxCall('home.html', displayHomeContent);">
     <div class="header">
         <h1>Shop Online</h1>
     </div>
-
-    <div class="row">
-        <div class="column side">
-            <div id="topslist">
-                <h3>TOPS</h3>
-            </div>
-            <div id="filters">
-                <h3>Filter + Sort</h3>
-                By Size:
-                <br>
-                <ul id="bysize"></ul>
-                By Fit:
-                <br>
-                <ul id="byfit"></ul>
-                By Neck Type:
-                <br>
-                <ul id="bynecktype"></ul>
-                By SleeveType:
-                <br>
-                <ul id="bysleevetype"></ul>
-                By Colors:
-                <br>
-                <ul id="bycolor"></ul>
-                By Shirt Type:
-                <br>
-                <ul id="byshirttype"></ul>
-            </div>
-            <button type="button" onclick="filterfunc()">Apply</button>
-        </div>
-
-        <div class="column middle">
-            <h4 id="displayfilteredby"></h4>
-            <div id="list">
-                <div id="listbody">
-                </div>
-                <script>
-                    var newProductData = jsonproductdata;
-                    newProductData.forEach(drawOneProduct);
-                </script>
-            </div>
-
-            <div class="clearfix"></div>
-        </div>
+    <div id="main">
 
     </div>
-    
-</body>
 
+
+</body>
 
 </html>

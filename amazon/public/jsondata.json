@@ -133,7 +133,7 @@
                 "Sleeve_type": "half_sleeve",
                 "available_colors": [{
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/1165_8500_001_f?$PDP_78_Main$",
-                    "colors": ["black"],
+                    "colors": ["black"]
                 }, {
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/1165_8500_100_f?$PDP_78_Main$",
                     "colors": ["white"]
@@ -209,7 +209,7 @@
                 "Sleeve_type": "half_sleeve",
                 "available_colors": [{
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/1177_9212_410_f?$PDP_78_Main$",
-                    "colors": ["blue"],
+                    "colors": ["blue"]
                 }, {
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/1177_9212_001_f?$PDP_78_Main$",
                     "colors": ["black"]
@@ -234,7 +234,7 @@
                 "price": "16",
                 "size": [
                     "S",
-                    "M",
+                    "M"
                 ],
                 "fit": [
                     "Regular",
@@ -281,7 +281,7 @@
                 "Sleeve_type": "full_sleeve",
                 "available_colors": [{
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/0193_9818_600_of?$PDP_78_Main$",
-                    "colors": ["red", "black"],
+                    "colors": ["red", "black"]
                 }, {
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/0193_9818_410_f?$PDP_78_Main$",
                     "colors": ["white", "navy"]
@@ -331,7 +331,7 @@
                 "Sleeve_type": "full_sleeve",
                 "available_colors": [{
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/1142_1355_400_of?$PDP_78_Main$",
-                    "colors": ["navy", "blue"],
+                    "colors": ["navy", "blue"]
                 }],
                 "shirt_type": "sweatshirt"
 
@@ -353,7 +353,7 @@
                 "Sleeve_type": "half_sleeve",
                 "available_colors": [{
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/1165_8580_800_of?$PDP_78_Main$",
-                    "colors": ["orange"],
+                    "colors": ["orange"]
                 }, {
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/1165_8580_600_f?$PDP_78_Main$",
                     "colors": ["red"]
@@ -387,7 +387,7 @@
                 "Sleeve_type": "half_sleeve",
                 "available_colors": [{
                     "image_url": "https://s7d2.scene7.com/is/image/aeo/2154_1032_100_of?$PDP_78_Main$",
-                    "colors": ["white"],
+                    "colors": ["white"]
                 }],
                 "shirt_type": "shirt"
 
@@ -400,7 +400,7 @@
                     "XL"
                 ],
                 "fit": [
-                    "Regular",
+                    "Regular"
                 ],
                 "Neck_type": "collar",
                 "Sleeve_type": "half_sleeve",

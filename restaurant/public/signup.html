@@ -1,0 +1,76 @@
+<div id="form">
+    <form autocomplete="on" action="/success.html" target="_self">
+        <fieldset>
+            <legend>Personal Info</legend>
+            FirstName*:
+            <input id="fname" type="text" name="firstname" placeholder="Enter your firstname" autofocus required>
+            <br> MiddleName:
+            <input id="mname" type="text" name="middlename" disabled>
+            <br> LastName:
+            <input id="lname" type="text" name="lastname">
+            <br> Gender:
+            <br>
+            <input id="male" type="radio" name="gender" value="male" checked> Male
+            <br>
+            <input id="female" type="radio" name="gender" value="female"> Female
+            <br>Birthday:
+            <input id="bday" type="date" name="bday">
+            <br> Citizenship:
+            <select id="country" name="country" required>
+                <option value="india">India</option>
+                <option value="us" selected>US</option>
+                <option value="australia">AUS</option>
+            </select>
+            <br> Address:
+            <input id="addr1" type="text" name="addr1" placeholder="Address Line1">
+            <br>
+            <input id="addr2" type="text" name="addr2" placeholder="Address Line2">
+            <br> ZipCode:
+            <input id="zip" type="text" name="zip" pattern="[0-9]{5}" maxlength="5">
+            <br> State:
+            <input list="state" name="state">
+            <datalist id="state">
+                <option value="NewYork" />
+                <option value="California" />
+                <option value="Texas" />
+                <option value="Virginia" />
+                <option value="Florida" />
+                <option value="Tenesse" />
+                <option value="Maryland" />
+            </datalist>
+
+            <br> Phone No.
+            <input id="phonenumber" type="text" name="phonenumber" pattern="[0-9]{10}">
+            <br> Email:
+            <input id="email" type="email" name="email">
+            <br> Re-enter Email:
+            <input id="reenteremail" type="email" name="reenteremail">
+            <br> Password
+            <input id="pwd" type="password">
+            <br> Select your Image:
+            <input id="img" type="file" name="img" accept="image/*">
+        </fieldset>
+        Cuisine you like:
+        <br>
+        <select id="cuisine" name="cuisine" size="4" multiple>
+            <option value="indian">Indian</option>
+            <option value="mexican">Mexican</option>
+            <option value="american">American</option>
+            <option value="chinese">Chinese</option>
+            <option value="srilankan">Srilankan</option>
+        </select>
+        <br>Spice Level you Prefer:
+        <input id="less" type="checkbox" name="less">Less
+        <input id="mild" type="checkbox" name="mild">Mild
+        <input id="hot" type="checkbox" name="hot">Hot
+        <input id="extrahot" type="checkbox" name="extrahot"> Extrahot
+        <br> Rating:
+        <input id="rating" type="range" name="points" min="0" max="10">
+        <br>
+        <textarea id="message" name="message" rows="5" cols="30" placeholder="Give your Message here"></textarea>
+
+        <button id="submit" type="submit" value="Submit">Submit</button>
+        <button id="reset" type="reset" value="reset">Reset</button>
+
+    </form>
+</div>
